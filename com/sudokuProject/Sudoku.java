@@ -32,6 +32,7 @@ public class Sudoku {
 
 		try {
 			scanner = new Scanner(new BufferedReader(new FileReader(location)));
+			System.out.println("\n-------Sudoku Puzzle-------\n");
 			for (int iCounter = 0; iCounter < 9; iCounter++) {
 				for (int jCounter = 0; jCounter < 9; jCounter++) {
 					sudoku.sudokuPuzzle[iCounter][jCounter] = scanner.nextInt();
