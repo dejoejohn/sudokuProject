@@ -5,6 +5,11 @@ import com.sudokuProject.Sudoku;
 public class SudokuHelper {
 
 	public boolean checkSubGridValues(int number, Sudoku sudoku, int row, int column) {
+		/**
+		 * checkSubGridValues method checks the 3x3 matrix for the values
+		 * that is equal to the number that is passed as a parameter to the
+		 * method.
+		 */
 		int subGridRow, subGridColumn;
 		subGridRow = (row / 3) * 3;
 		subGridColumn = (column / 3) * 3;
@@ -19,6 +24,10 @@ public class SudokuHelper {
 	}
 
 	public boolean checkRowAndColumnValues(int number, Sudoku sudoku, int row, int column) {
+		/**
+		 * checkRowAndColumnValues method checks the rows and columns for the values
+		 * that is equal to the number that is passed as a parameter to the mathod.
+		 */
 		for (int counter = 0; counter < 9; counter++) {
 			if (sudoku.sudokuPuzzle[row][counter] == number) {
 				return false;
@@ -31,6 +40,10 @@ public class SudokuHelper {
 	}
 
 	public boolean solveSudoku(Sudoku sudoku, int row, int column) {
+		/**
+		 * solveSudoku is the method that actually uses recursive calls to apply
+		 * backtracking in the sudoku problem to generate the accurate result.
+		 */
 		int nextNumber = 1;
 		if (row == 9)
 			return true;
