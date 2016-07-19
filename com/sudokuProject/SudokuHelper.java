@@ -6,9 +6,8 @@ public class SudokuHelper {
 
 	public boolean checkSubGridValues(int number, Sudoku sudoku, int row, int column) {
 		/**
-		 * checkSubGridValues method checks the 3x3 matrix for the values
-		 * that is equal to the number that is passed as a parameter to the
-		 * method.
+		 * checkSubGridValues method checks the 3x3 matrix for the values that
+		 * is equal to the number that is passed as a parameter to the method.
 		 */
 		int subGridRow, subGridColumn;
 		subGridRow = (row / 3) * 3;
@@ -25,8 +24,9 @@ public class SudokuHelper {
 
 	public boolean checkRowAndColumnValues(int number, Sudoku sudoku, int row, int column) {
 		/**
-		 * checkRowAndColumnValues method checks the rows and columns for the values
-		 * that is equal to the number that is passed as a parameter to the mathod.
+		 * checkRowAndColumnValues method checks the rows and columns for the
+		 * values that is equal to the number that is passed as a parameter to
+		 * the mathod.
 		 */
 		for (int counter = 0; counter < 9; counter++) {
 			if (sudoku.sudokuPuzzle[row][counter] == number) {
